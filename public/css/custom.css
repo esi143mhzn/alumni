@@ -1,0 +1,98 @@
+body {
+    padding-top: 60px;
+}
+
+#packages .thumbnail img {
+    width: 100%;
+}
+
+#packages .row .col-md-4:nth-child(3n+1) {
+    clear: both;
+}
+
+#bus .row .col-md-3:nth-child(4n+1) {
+    clear: both;
+}
+
+.red {
+    color: red;
+}
+
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.social {
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/*
+    Multicoloured Hover Variations
+*/
+
+#social-fb:hover {
+    color: #3B5998;
+}
+#social-tw:hover {
+    color: #4099FF;
+}
+#social-gp:hover {
+    color: #d34836;
+}
+#social-gp:hover {
+    color: red;
+}
+#social-em:hover {
+    color: #f39c12;
+}
+/*Carousel*/
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+	
+      
+  }
+
+/*set the footer*/
+footer {
+    margin-top: 20px;
+    background-color: #111;
+    width: 100%;
+    color: #ccc;
+    margin-top: 1cm;
+}
+
+.img-center {
+    margin: auto;
+}
+
+.team .col-md-4 {
+    margin-top: 20px;
+}
+
+/*for  carousel*/
+
+.glyphicon-chevron-left:before {
+  content: "\e079";
+}
+.glyphicon-chevron-right:before {
+  content: "\e080";
+}
+
+  
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  z-index: 5;
+  display: inline-block;
+  margin-top: -10px;
+}
