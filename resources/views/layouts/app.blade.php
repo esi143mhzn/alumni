@@ -24,6 +24,7 @@
             margin-right: 6px;
         }
     </style>
+    @yield('css')
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -39,15 +40,24 @@
                 </button>
 
                 <!-- Branding Image -->
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
-                </a>
+                <!-- <a class="navbar-brand" href="{{ url('/') }}">
+                    Home
+                </a> -->
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    <li><a href="{{ url('/home') }}">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
+                     <li>
+                        <a href="/about">About</a>
+                    </li>
+                    <li>
+                        <a href="/forums">Forum</a>
+                    </li>
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
                 </ul>
 
                 <!-- Right Side Of Navbar -->
@@ -78,5 +88,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
+    @yield('js')
 </body>
 </html>

@@ -10,7 +10,7 @@
            <div id="custom-search-input">
                             <div class="input-group col-md-12">
                              <form action="/search" method="GET">
-                                <input type="text" name="search" value=""class="  search-query form-control" placeholder="Search" />
+                                <input type="text" name="search" value="" class="  search-query form-control" placeholder="Search" />
                                 <span class="input-group-btn">
                                     <button class="btn btn-success" type="submit">
                                         <span class=" glyphicon glyphicon-search"></span>
@@ -19,17 +19,32 @@
                                 </form>
                             </div>
             </div>
-    <h3> Find Alumni Graduation</h3>
-    <div class="dropdown">
-         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Gradutaion Date
-  <span class="caret"></span></button>
-      <ul class="dropdown-menu">
-        <li><a href="#">2070-10-10</a></li>
-        <li><a href="#">2071-10-10</a></li>
-        <li><a href="#">2072-10-10</a></li>
-      </ul>
-    </div>
-   
+   <h3>Alumni Graduation Date</h3>
+           <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                             <form action="/datesearch" method="GET">
+                                <input type="text" name="datesearch" value="" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                                </form>
+                            </div>
+            </div>
+            <h3>Alumni Profession</h3>
+      <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                             <form action="/profsearch" method="GET">
+                                <input type="text" name="profsearch" value="" class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                                </form>
+                            </div>
+            </div>
 
 
     
@@ -41,10 +56,10 @@
 
 
 <div class="col-md-9">
-
+ 
     <h2>Our Alumni</h2>
    
-        
+       
 
         @foreach($users as $user)
             <div class="row">
@@ -74,6 +89,10 @@
                                         <tr>
                                             <td><dt> Comment</dt></td>
                                             <td><mark> {{$user->Comments}}</mark></td>
+                                        </tr>
+                                         <tr>
+                                            <td><dt>Profession:</dt></td>                                    
+                                            <td><mark> {{$user->Profession}}</mark></td>
                                         </tr>
 
                                     </tbody>
@@ -105,7 +124,7 @@
             </div>
         </div>
         @endforeach
-       
+          
     
 </div>
 

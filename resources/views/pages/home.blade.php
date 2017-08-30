@@ -19,17 +19,48 @@
                                 </form>
                             </div>
             </div>
-    <h3> Find Alumni Graduation</h3>
-    <div class="dropdown">
-         <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Gradutaion Date
+
+    <h3>Alumni Graduation Date</h3>
+      <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                             <form action="/datesearch" method="GET">
+                                <input type="text" name="datesearch" value=""class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                                </form>
+                            </div>
+            </div>
+             <h3>Alumni Profession</h3>
+      <div id="custom-search-input">
+                            <div class="input-group col-md-12">
+                             <form action="/profsearch" method="GET">
+                                <input type="text" name="datesearch" value=""class="  search-query form-control" placeholder="Search" />
+                                <span class="input-group-btn">
+                                    <button class="btn btn-success" type="submit">
+                                        <span class=" glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                                </form>
+                            </div>
+            </div>
+   <!--  <div class="dropdown">
+       but  <ton class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Gradutaion Date
   <span class="caret"></span></button>
       <ul class="dropdown-menu">
-        <li><a href="#">2070-10-10</a></li>
-        <li><a href="#">2071-10-10</a></li>
-        <li><a href="#">2072-10-10</a></li>
+
+  
+        
+             @foreach($users as $user)
+             <li><a href="{!!url('individual', $user->ID)!!}">2070-10-10</a></li>
+             <li><a href="{!!url('individual', $user->ID)!!}">2071-10-10</a></li>
+             <li><a href="{!!url('individual', $user->ID)!!}">2072-10-10</a></li>
+             @endforeach
       </ul>
-    </div>
-   
+    </div> -->
+
 
 
 	
@@ -66,16 +97,7 @@
                                         <tr>
                                             <td><dt> Address:</dt></td>
                                             <td><mark> {{$user->Address}}</mark></td>
-                                        </tr>
-                                        <tr>
-                                            <td><dt> Email:</dt></td>
-                                            <td><mark> {{$user->Email}}</mark></td>
-                                        </tr>
-                                        <tr>
-                                            <td><dt> Comment</dt></td>
-                                            <td><mark> {{$user->Comments}}</mark></td>
-                                        </tr>
-
+                                       
                                     </tbody>
 
                                 </table>                     

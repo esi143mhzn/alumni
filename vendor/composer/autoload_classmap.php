@@ -6,6 +6,15 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddColorRowToChatterDiscussions' => $baseDir . '/database/migrations/2016_08_03_121747_add_color_row_to_chatter_discussions.php',
+    'AddMarkdownAndLockToChatterPosts' => $baseDir . '/database/migrations/2017_01_16_121747_add_markdown_and_lock_to_chatter_posts.php',
+    'AddSlugFieldForDiscussions' => $baseDir . '/database/migrations/2016_08_02_183143_add_slug_field_for_discussions.php',
+    'ChatterTableSeeder' => $baseDir . '/database/seeds/ChatterTableSeeder.php',
+    'CreateChatterCategoriesTable' => $baseDir . '/database/migrations/2016_07_29_171118_create_chatter_categories_table.php',
+    'CreateChatterDiscussionTable' => $baseDir . '/database/migrations/2016_07_29_171118_create_chatter_discussion_table.php',
+    'CreateChatterPostTable' => $baseDir . '/database/migrations/2016_07_29_171118_create_chatter_post_table.php',
+    'CreateChatterUserDiscussionPivotTable' => $baseDir . '/database/migrations/2017_01_16_121747_create_chatter_user_discussion_pivot_table.php',
+    'CreateForeignKeys' => $baseDir . '/database/migrations/2016_07_29_171128_create_foreign_keys.php',
     'CreatePasswordResetsTable' => $baseDir . '/database/migrations/2014_10_12_100000_create_password_resets_table.php',
     'CreateUsersTable' => $baseDir . '/database/migrations/2014_10_12_000000_create_users_table.php',
     'DatabaseSeeder' => $baseDir . '/database/seeds/DatabaseSeeder.php',

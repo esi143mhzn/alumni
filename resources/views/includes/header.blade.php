@@ -22,7 +22,7 @@
                         <a href="/about">About</a>
                     </li>
                     <li>
-                        <a href="/fourm">Fourm</a>
+                        <a href="/forums">Forum</a>
                     </li>
                     <li>
                         <a href="/contact">Contact</a>

@@ -1,4 +1,14 @@
 @extends('layouts.default')
+@if (Auth::guest())
+<p>               </p>
+<p>                 </p>
+<p>                 </p>
+<h1> hello </h1>
+
+<p> Please <a href="{{ url('/login') }}"> Login </a>or <a href="{{ url('/register') }}">register</a> </p>
+                       <!--  <li><a href="{{ url('/login') }}">Login</a></li>
+                        <li><a href="{{ url('/register') }}">Register</a></li> -->
+                    @else
 
 @section('content')
 <div class="container" >
@@ -30,6 +40,11 @@
                                             <td><dt> Comment</dt></td>
                                             <td><mark> {{$user_ind->Comments}}</mark></td>
                                         </tr>
+                                         <tr>
+                                            <td><dt>Profession:</dt></td>                                    
+                                            <td><mark> {{$user_ind->Profession}}</mark></td>
+                                        </tr>
+
                                     
 
                                     </tbody>
@@ -54,3 +69,4 @@
     
 
 @stop
+@endif

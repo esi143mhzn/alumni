@@ -17,23 +17,44 @@
 //Route::get('setting/{id}', array('as' => 'setting', 'uses' =>'UC@setting'));
 
 
-Route::get('about', function()
+// Route::get('about', function()
+// {
+// 	 Route::auth();
+//     return View::make('pages.about');
+// });
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+    Route::get('about', function()
 {
-	
     return View::make('pages.about');
 });
-Route::get('fourm', function()
-{
-    return View::make('pages.fourm');
+
+
+    
 });
-Route::get('contact', function()
+// Route::get('forum', function()
+// {
+//     return View::make('pages.fourm');
+// });
+
+Route::group(['middleware' => 'web'], function () {
+	Route::auth();
+   Route::get('contact', function()
 {
-    return View::make('pages.contact');
+	 
+    return View::make('pages.contactus');
 });
+});
+
 
 
 
 Route::get('search', 'SearchController@searchinput');
+Route::get('datesearch', 'SearchController@searchdate');
+Route::get('profsearch', 'SearchController@searchpro');
+
+
 
 
 /*
@@ -93,4 +114,10 @@ Route::post('auth/register', 'Auth\AuthController@postRegister');
 Route::get('search', 'SearchController@searchinput');
 
 
+});
+
+Route::group(['middleware' => 'web'], function () {
+    Route::auth();
+
+    Route::get('/home', 'HomeController@index');
 });
